@@ -35,9 +35,15 @@ const Footer = () => (
           </p>
         </div>
         <div className="flex gap-4">
-          <Github size={18} className="text-muted-foreground transition-colors hover:text-foreground cursor-pointer" />
-          <Linkedin size={18} className="text-muted-foreground transition-colors hover:text-foreground cursor-pointer" />
-          <FileText size={18} className="text-muted-foreground transition-colors hover:text-foreground cursor-pointer" />
+          <a href="https://github.com/pbbhattpriyanshu" target="_blank" rel="noopener noreferrer">
+            <Github size={18} className="text-muted-foreground transition-colors hover:text-foreground cursor-pointer" />
+          </a>
+          <a href="https://www.linkedin.com/in/priyanshupb01008/" target="_blank" rel="noopener noreferrer">
+            <Linkedin size={18} className="text-muted-foreground transition-colors hover:text-foreground cursor-pointer" />
+          </a>
+          <a href="https://hashnode.com/@bhattpriyanshu" target="_blank" rel="noopener noreferrer">
+            <FileText size={18} className="text-muted-foreground transition-colors hover:text-foreground cursor-pointer" />
+          </a>
         </div>
         <p className="text-sm text-muted-foreground">Built by Priyanshu Bhatt</p>
       </div>
