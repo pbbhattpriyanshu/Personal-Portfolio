@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Moon, Sun } from "lucide-react";
+import { useTheme } from "@/components/theme-provider";
 
 const links = ["about", "skills", "experience", "projects", "blogs", "contact"];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 0);
@@ -15,7 +17,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`nav-blur fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${scrolled ? "border-white/10" : "border-transparent"}`}>
+    <nav className={`nav-blur fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${scrolled ? "border-white/10 dark:border-white/10 border-black/10" : "border-transparent"}`}>
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <a href="#" className="font-mono text-lg font-semibold">
           <span className="text-primary">&gt;_</span>{" "}
@@ -32,14 +34,31 @@ const Navbar = () => {
               {l}
             </a>
           ))}
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="text-muted-foreground hover:text-primary transition-colors"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
         </div>
 
-        <button
-          className="text-foreground md:hidden"
-          onClick={() => setOpen(!open)}
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <button
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            className="text-foreground transition-colors hover:text-primary"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button
+            className="text-foreground hover:text-primary transition-colors"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {open && (
