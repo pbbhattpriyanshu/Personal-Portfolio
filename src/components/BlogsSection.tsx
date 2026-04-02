@@ -2,19 +2,22 @@ import { BookOpen, ExternalLink } from "lucide-react";
 
 const blogs = [
   {
-    tag: "CI/CD",
-    title: "From Red Builds to Green: My First Jenkins CI/CD Journey",
-    desc: "A hands-on breakdown of building a CI/CD pipeline with Jenkins, Docker, and deployment automation.",
+    tag: "Docker",
+    title: "Creating My First Dockerfile",
+    desc: "A step-by-step beginner's guide to containerizing applications and writing your very first Dockerfile.",
+    link: "https://masterdocker.hashnode.dev/creating-my-first-dockerfile",
   },
   {
-    tag: "Kubernetes",
-    title: "Top 5 Mistakes Beginners Make While Learning Kubernetes (And How I Solved Them)",
-    desc: "Practical Kubernetes learning mistakes and clean ways to avoid them while building production-ready habits.",
+    tag: "AWS / Cloud",
+    title: "Understanding AWS EC2: Where Applications Actually Run",
+    desc: "Day 3 of my cloud journey: diving deep into AWS Elastic Compute Cloud (EC2) and exploring virtual servers.",
+    link: "https://mastercloud.hashnode.dev/day-3-of-my-cloud-journey-understanding-aws-ec2-where-applications-actually-run",
   },
   {
-    tag: "API Security",
-    title: "How Authentication APIs Work (JWT-Based): Real-World Guide",
-    desc: "A practical JWT authentication API guide focused on request flow, token handling, and production patterns.",
+    tag: "JavaScript",
+    title: "Core JavaScript Concepts: Very Frequently Asked",
+    desc: "Day 2 of mastering JS: a detailed rundown of the most frequently asked JavaScript concepts for interviews.",
+    link: "https://masterjsinterview.hashnode.dev/day-2-core-javascript-concepts-very-frequently-asked",
   },
 ];
 
@@ -25,13 +28,13 @@ const BlogsSection = () => (
         <p className="section-label mb-3">// writing</p>
         <h2 className="section-heading">Featured Blogs</h2>
         <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-          Selected technical articles on CI/CD, Kubernetes, and DevOps reliability.
+          Selected technical articles on backend development, CI/CD pipelines, and cloud deployment practices.
         </p>
       </div>
 
       <div className="grid gap-6 md:grid-cols-3">
         {blogs.map((b) => (
-          <div key={b.title} className="glass-card-hover flex flex-col p-6">
+          <a key={b.title} href={b.link} target="_blank" rel="noopener noreferrer" className="glass-card-hover flex flex-col p-6 block">
             <div className="mb-4 flex items-center justify-between">
               <span className="rounded-md border border-primary/30 bg-primary/10 px-3 py-1 font-mono text-xs text-primary">
                 {b.tag}
@@ -44,10 +47,10 @@ const BlogsSection = () => (
             <p className="mb-4 flex-1 text-sm leading-relaxed text-muted-foreground">
               {b.desc}
             </p>
-            <a href="#" className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary">
+            <div className="inline-flex items-center gap-2 font-mono text-sm text-muted-foreground transition-colors hover:text-primary">
               <BookOpen size={14} /> read_article
-            </a>
-          </div>
+            </div>
+          </a>
         ))}
       </div>
     </div>
