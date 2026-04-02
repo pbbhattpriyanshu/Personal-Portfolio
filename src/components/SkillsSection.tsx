@@ -9,7 +9,7 @@ const categories = [
 },
 {
   title: "Database",
-  items: ["MongoDB", "Mongoose"],
+  items: ["MongoDB", "Mongoose", "MySQL"],
 },
 {
   title: "DevOps & Deployment",
