@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Github, Linkedin, Twitter, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Send, AtSign, FileText } from "lucide-react";
 import { toast } from "sonner";
 
 const socials = [
-  { icon: Github, name: "GitHub", handle: "@pbbhattpriyanshu" },
-  { icon: Linkedin, name: "LinkedIn", handle: "Priyanshu Bhatt" },
-  { icon: Twitter, name: "X (Twitter)", handle: "@PriyanshuBhatt" },
+  { icon: Github, name: "GitHub", handle: "@pbbhattpriyanshu", link: "https://github.com/pbbhattpriyanshu" },
+  { icon: Linkedin, name: "LinkedIn", handle: "Priyanshu Bhatt", link: "https://www.linkedin.com/in/priyanshupb01008/" },
+  { icon: Twitter, name: "X (Twitter)", handle: "@Priyanshu12bha", link: "https://twitter.com/Priyanshu12bha" },
+  { icon: AtSign, name: "Threads", handle: "@Priyanshu12bha", link: "https://threads.net/@Priyanshu12bha" },
+  { icon: FileText, name: "Hashnode", handle: "@bhattpriyanshu", link: "https://hashnode.com/@bhattpriyanshu" },
 ];
 
 const ContactSection = () => {
@@ -24,7 +26,7 @@ const ContactSection = () => {
           <p className="section-label mb-3">// get_in_touch</p>
           <h2 className="section-heading">Let's Connect</h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            Interested in collaborating on DevOps projects or discussing cloud
+            Interested in collaborating on Backend and DevOps projects or discussing cloud
             architecture? Let's build something amazing together.
           </p>
         </div>
@@ -33,8 +35,8 @@ const ContactSection = () => {
           <div>
             <h3 className="mb-6 text-xl font-bold text-foreground">Find me on</h3>
             <div className="space-y-4">
-              {socials.map(({ icon: Icon, name, handle }) => (
-                <a key={name} href="#" className="glass-card-hover flex items-center gap-4 p-5">
+              {socials.map(({ icon: Icon, name, handle, link }) => (
+                <a key={name} href={link} target="_blank" rel="noopener noreferrer" className="glass-card-hover flex items-center gap-4 p-5">
                   <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
                     <Icon size={20} className="text-primary" />
                   </div>
