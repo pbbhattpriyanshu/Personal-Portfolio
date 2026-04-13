@@ -19,6 +19,15 @@ const experiences = [
     desc: "Publishing technical blogs on backend development, system design, and real-world project learnings. Sharing insights on building scalable systems, performance optimization, and developer workflows.",
     tags: ["Technical Writing", "Backend", "System Design", "Dev Community"],
   },
+   {
+    icon: FileText,
+    title: "Open Source Contributor",
+    org: "Script Winter of Code (SWOC)",
+    location: "Remote",
+    period: "Nov 2025 - Jan 2026",
+    desc: "Contributed to open-source projects focusing on documentation improvements and automation workflows, enhancing developer onboarding and usability.",
+    tags: ["Open Source", "Documentation", "Automation"],
+  },
   {
     icon: Code2,
     title: "Full-Stack Developer Intern",
@@ -27,15 +36,6 @@ const experiences = [
     period: "Feb 2025 - May 2025",
     desc: "Developed and optimized responsive web applications using React and JavaScript, improving UI performance and usability. Worked on API integrations and collaborated using Git/GitHub in a real-world development environment.",
     tags: ["React", "JavaScript", "API Integration", "Git"],
-  },
-  {
-    icon: FileText,
-    title: "Open Source Contributor",
-    org: "Script Winter of Code (SWOC)",
-    location: "Remote",
-    period: "Nov 2025 - Jan 2026",
-    desc: "Contributed to open-source projects focusing on documentation improvements and automation workflows, enhancing developer onboarding and usability.",
-    tags: ["Open Source", "Documentation", "Automation"],
   },
   {
     icon: Code2,
