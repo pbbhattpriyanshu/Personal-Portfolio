@@ -1,14 +1,14 @@
 import { FileText, Code2 } from "lucide-react";
 
 const experiences = [
-  {
+    {
     icon: Code2,
-    title: "Backend Engineer (Independent)",
-    org: "Self-Driven Engineering",
-    location: "Remote",
-    period: "2025 - Present",
-    desc: "Designed and built scalable backend systems including a banking backend with double-entry ledger architecture, AI-powered platforms, and real-time systems. Focused on system design, performance optimization (~35% latency reduction using Redis), and building production-ready APIs with secure authentication and concurrency-safe workflows.",
-    tags: ["Node.js", "FastAPI", "System Design", "Redis", "MongoDB", "AWS"],
+    title: "Frontend Developer (College Project)",
+    org: "Kumaon Jewellery Heritage",
+    location: "Uttarakhand",
+    period: "2024",
+    desc: "Contributed to building a web platform showcasing traditional Kumaoni jewellery and cultural heritage of Uttarakhand. Designed responsive UI/UX and implemented frontend features using React and JavaScript to present historical and cultural information effectively.",
+    tags: ["React", "JavaScript", "UI/UX", "Git"],
   },
   {
     icon: Code2,
@@ -21,6 +21,15 @@ const experiences = [
   },
   {
     icon: FileText,
+    title: "Open Source Contributor",
+    org: "Script Winter of Code (SWOC)",
+    location: "Remote",
+    period: "Nov 2025 - Jan 2026",
+    desc: "Contributed to open-source projects focusing on documentation improvements and automation workflows, enhancing developer onboarding and usability.",
+    tags: ["Open Source", "Documentation", "Automation"],
+  },
+    {
+    icon: FileText,
     title: "Technical Writer & Developer",
     org: "Hashnode",
     location: "Remote",
@@ -30,21 +39,12 @@ const experiences = [
   },
   {
     icon: Code2,
-    title: "Frontend Developer (College Project)",
-    org: "Kumaon Jewellery Heritage",
-    location: "Uttarakhand",
-    period: "2024",
-    desc: "Contributed to building a web platform showcasing traditional Kumaoni jewellery and cultural heritage of Uttarakhand. Designed responsive UI/UX and implemented frontend features using React and JavaScript to present historical and cultural information effectively.",
-    tags: ["React", "JavaScript", "UI/UX", "Git"],
-  },
-  {
-    icon: FileText,
-    title: "Open Source Contributor",
-    org: "Script Winter of Code (SWOC)",
+    title: "Backend Engineer (Independent)",
+    org: "Self-Driven Engineering",
     location: "Remote",
-    period: "Nov 2025 - Jan 2026",
-    desc: "Contributed to open-source projects focusing on documentation improvements and automation workflows, enhancing developer onboarding and usability.",
-    tags: ["Open Source", "Documentation", "Automation"],
+    period: "2025 - Present",
+    desc: "Designed and built scalable backend systems including a banking backend with double-entry ledger architecture, AI-powered platforms, and real-time systems. Focused on system design, performance optimization (~35% latency reduction using Redis), and building production-ready APIs with secure authentication and concurrency-safe workflows.",
+    tags: ["Node.js", "FastAPI", "System Design", "Redis", "MongoDB", "AWS"],
   },
 ];
 
